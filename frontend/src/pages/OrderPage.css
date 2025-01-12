@@ -1,0 +1,144 @@
+/* Order Container */
+.order-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Order Title */
+.order-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Order Grid */
+.order-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* Menu Section */
+.menu-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.menu-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.menu-item p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.add-to-cart-button {
+    background: #6a11cb;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background: #2575fc;
+}
+
+/* Cart Section */
+.cart-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.cart-item p {
+    margin: 0;
+    color: #333;
+}
+
+.place-order-button {
+    background: #6a11cb;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.place-order-button:hover {
+    background: #2575fc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-items {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .order-title {
+        font-size: 1.5rem;
+    }
+
+    .menu-item h3 {
+        font-size: 1rem;
+    }
+
+    .menu-item p {
+        font-size: 0.9rem;
+    }
+
+    .add-to-cart-button,
+    .place-order-button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}

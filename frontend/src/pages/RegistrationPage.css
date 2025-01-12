@@ -1,0 +1,98 @@
+/* Registration Container */
+.registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #caabec, #2575fc);
+    padding: 20px;
+}
+
+/* Registration Card */
+.registration-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Registration Form */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.registration-input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.registration-input:focus {
+    border-color: #6a11cb;
+}
+
+.registration-button {
+    padding: 0.75rem;
+    background: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.registration-button:hover {
+    background: #2575fc;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    margin-bottom: 1rem;
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .registration-card {
+        padding: 1.5rem;
+    }
+
+    .registration-input {
+        padding: 0.5rem;
+    }
+
+    .registration-button {
+        padding: 0.5rem;
+    }
+}

@@ -1,0 +1,103 @@
+/* Order History Container */
+.order-history-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Order History Title */
+.order-history-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Order History Grid */
+.order-history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Order Card */
+.order-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Order ID */
+.order-id {
+    font-weight: bold;
+    color: #6a11cb;
+    margin-bottom: 10px;
+}
+
+/* Order Items Title */
+.order-items-title {
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Order Items List */
+.order-items-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.order-item {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Order Total */
+.order-total {
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Order Status */
+.order-status {
+    color: #2575fc;
+    margin: 10px 0;
+}
+
+/* Order Date */
+.order-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .order-history-title {
+        font-size: 1.5rem;
+    }
+
+    .order-card {
+        padding: 15px;
+    }
+
+    .order-item {
+        font-size: 0.9rem;
+    }
+
+    .order-total,
+    .order-status,
+    .order-date {
+        font-size: 0.9rem;
+    }
+}
