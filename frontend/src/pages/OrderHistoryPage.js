@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../context/AuthContext";
+import { backend_url } from '../server'
 import "./OrderHistoryPage.css";
 
 const OrderHistoryPage = () => {
@@ -13,7 +14,7 @@ const OrderHistoryPage = () => {
 
     const fetchOrderHistory = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/orders", {
+            const response = await axios.get(`${backend_url}/orders`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setOrders(response.data);

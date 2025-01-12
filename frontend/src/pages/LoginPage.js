@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { backend_url } from '../server'
 import "./LoginPage.css";
 
 const LoginPage = () => {
@@ -18,7 +19,7 @@ const LoginPage = () => {
         }
 
         try {
-            const response = await axios.post("http://localhost:5000/login", {
+            const response = await axios.post(`${backend_url}/login`, {
                 username,
                 password,
             });

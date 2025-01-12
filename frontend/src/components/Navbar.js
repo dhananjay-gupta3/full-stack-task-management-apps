@@ -16,14 +16,14 @@ const Navbar = () => {
                     Restaurant App
                 </Link>
 
-                {/* Hamburger Icon */}
+               
                 <div className="menu-icon" onClick={toggleMenu}>
                     <div className={isOpen ? "bar bar1 open" : "bar bar1"}></div>
                     <div className={isOpen ? "bar bar2 open" : "bar bar2"}></div>
                     <div className={isOpen ? "bar bar3 open" : "bar bar3"}></div>
                 </div>
 
-                {/* Navigation Links */}
+              
                 <ul className={isOpen ? "nav-menu active" : "nav-menu"}>
                     <li className="nav-item">
                         <Link to="/menu" className="nav-links" onClick={toggleMenu}>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { backend_url } from '../server'
 import "./RegistrationPage.css";
 
 const RegistrationPage = () => {
@@ -18,7 +19,7 @@ const RegistrationPage = () => {
         }
 
         try {
-            const response = await axios.post("http://localhost:5000/register", {
+            const response = await axios.post(`${backend_url}/register`, {
                 username,
                 password,
             });

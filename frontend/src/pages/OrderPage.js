@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { backend_url } from '../server'
 import "./OrderPage.css";
 
 const OrderPage = () => {
@@ -16,7 +17,7 @@ const OrderPage = () => {
 
     const fetchMenuItems = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/menu");
+            const response = await axios.get(`${backend_url}/menu`);
             setMenuItems(response.data);
         } catch (error) {
             console.error("Error fetching menu items:", error);

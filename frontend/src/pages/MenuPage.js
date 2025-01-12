@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../context/AuthContext";
+import { backend_url } from '../server'
 import "./MenuPage.css";
 
 const MenuPage = () => {
@@ -19,7 +20,7 @@ const MenuPage = () => {
 
     const fetchMenuItems = async (page = 1) => {
         try {
-            const response = await axios.get("http://localhost:5000/menu", {
+            const response = await axios.get(`${backend_url}/menu`, {
                 params: { page, limit: 15, sortBy, availability: filterAvailability },
                 headers: { Authorization: `Bearer ${token}` },
             });
