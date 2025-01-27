@@ -12,7 +12,7 @@ const app = express();
 const PORT = 5000;
 
 const corsConfig = {
-    origin: "https://full-stack-task-management-apps-wjef.vercel.app",
+    origin: process.env.CLIENT_URL,
     credentials: true,
     method: ["GET", "POST", "PUT", "DELETE"],
 };
